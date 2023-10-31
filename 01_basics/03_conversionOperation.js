@@ -18,7 +18,7 @@ let valueInNumber = Number(score)  //CONVERT VARIABLE IN NUMBER
 
 
 
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
 
 
 
@@ -33,8 +33,7 @@ let booleanIsLoggedIn = Boolean (isLoggedIn)  //  CONVERT IN BOOLEAN
 
 
 
-
-// ----------------------------------------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------
 
 
 
@@ -42,8 +41,55 @@ let aNumber = 35
 // let aNumber = true
 
 let stringNumber = String(aNumber)
-console.log(stringNumber);
-console.log(typeof stringNumber);
+// console.log(stringNumber);
+// console.log(typeof stringNumber);
 
 
-// ----------------------------------------------------------------------------------------------------
+
+
+
+
+//*********************************** OPERATIONS ********************************************
+
+
+
+let value = 3
+let negValue = -value
+// console.log(negValue);
+
+// -----------------------------------------
+
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2/2);
+// console.log(2**2);
+// console.log(2%2);
+
+let str1 = "Hello"
+let str2 = " sanket"
+
+let str3 = str1 + str2
+// console.log(str3)
+
+// -------------------------
+
+// when string defined first then it treated as string 
+// console.log("1" + 2);
+// console.log(1 + "2");
+// console.log("1" + 2 + 2);
+
+// console.log(1 + 2 + "2"); //when string defined last then it do operation 
+
+// --------------------------------------
+
+
+// PREFIX/POSTFIX
+
+let gameCounter = 100
+++gameCounter;
+console.log(gameCounter);
+
+// Link to study
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Increment
