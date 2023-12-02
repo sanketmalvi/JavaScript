@@ -8,6 +8,7 @@ const repoCount = 20
 
 // ---------------------------
 
+// Another way of declare string
 const gameName = new String('Sanketsc')  //if run it in console will get the different methods
 
 // console.log(gameName[0]);

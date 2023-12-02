@@ -14,7 +14,11 @@ console.log("02" > 1);
 console.log("2" < true);
 
 
-// Avoid this type of conversion....it makes u confused
+// ===  (It check not only value but it compares datatype)
+
+console.log("2" === 2);
+
+// Avoid this type of conversion....it can makes u confused
 
 console.log(null > 0);
 console.log(null == 0);

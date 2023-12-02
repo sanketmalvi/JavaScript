@@ -28,7 +28,7 @@ const heros = ["shaktiman", "Krish", "Flyingjatt"];   //array
 
 
 let myObj = {
-    name: "Jack",             //Objects : All values in the braces 
+    name: "Jack",             //Objects : All values in the curly braces 
     age: "20",
     add: "mumbai"
 }
@@ -44,8 +44,7 @@ const myFunction = function(){
 // Study more
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof#description
 
-// https://262.ecma-international.org/5.1/#sec-11.4.3
-
+// https://262.ecma-international.org/5.1/#sec-11.4.
 
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -65,14 +64,23 @@ anothername = "chaiorcode"
 
 // HEAP
 let userOne = {
-    email: "user@ google.com",
+    email: "user@google.com",
     upi: "user@ybl"
 }
 
 let userTwo = userOne
 
-userTwo.email = "sanket@gmail.com"
+userTwo.email = "sanket@google.com"
 
 console.log(userOne.email);
 console.log(userTwo.email);
 
+
+
+
+/* 
+NOTE: 
+1) When change anything in Stack will get the copy of it.
+
+2) When change in Heap will get the reference of it (that means whatever we changes it will be the original value)
+*/

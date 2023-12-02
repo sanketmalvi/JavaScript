@@ -5,8 +5,8 @@ const balance = new Number(100)  //Specifically mentioned datatype
 // console.log(balance);
 
 
-// console.log(balance.toString().length);
-// console.log(balance.toFixed(2).length);
+console.log(balance.toString().length);
+console.log(balance.toFixed(2).length);
 
 
 const  otherNumber = 123.3903
