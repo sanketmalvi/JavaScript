@@ -1,0 +1,7 @@
+JavaScript Execution context -
+
+1. Global Execution conte xt
+
+2. Function Execution context :
+
+JS runs program in two phases- 1. Memory Creation phase 2. Execution phase

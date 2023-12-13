@@ -25,11 +25,11 @@ function one() {
     const username = "sanket"   
 
     function two() {
-        // const website = "Utube"
-        console.log(username);
+        const website = "Utube"
+        // console.log(username);
     }
     // console.log(website);
-    // two()
+    two()
 }
 one()
 
@@ -39,7 +39,7 @@ if (true) {
     const username = "sanket"
     if (username === "sanket") {
         const website = " youtube"
-        console.log(username + website);
+        // console.log(username + website);
     }
     // console.log(website);
 }
