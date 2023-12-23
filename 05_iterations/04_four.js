@@ -1,5 +1,14 @@
 // forin loop
 
+// for (const key in object) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }
+
+
+
 // On objecct
 const myObject = {
     js: 'JAVASCRIPT',
@@ -8,7 +17,7 @@ const myObject = {
 }
 
 for (const key in myObject) {
-    // console.log(`${key} shortcut is for ${myObject[key]}`);
+    // console.log(`${key} is shortcut for ${myObject[key]}`);
 }
 
 
@@ -26,12 +35,11 @@ for (const key in programming) {
 
 // On Map
 
-// const map = new Map()
-// map.set('state', "MP")
-// map.set('In', "India")                   //Map is not iterable
-// map.set('USA', "AMerica")
+const map = new Map()
+map.set('state', "MP")
+map.set('In', "India")                   //Map is not iterable
+map.set('USA', "AMerica")
 
-
-// for (const key in map) {
+for (const key in map) {
 //    console.log(key);
-// }
+}

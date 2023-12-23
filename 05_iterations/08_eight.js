@@ -1,3 +1,5 @@
+// Reduce
+
 const nums = [1, 2, 3]
 
 const Total = nums.reduce(function (acc, currval) {
@@ -5,12 +7,12 @@ const Total = nums.reduce(function (acc, currval) {
     return acc + currval
 }, 0)              // passing 0 to Accumulator as initial value
 
-console.log(Total);
+console.log(`Total is : ${Total}`);
 
 
 // same 
 const myTotal = nums.reduce((acc,curval) => acc + curval, 2)
-console.log(myTotal);
+console.log(`myTotal is : ${myTotal}`);
 
 
 // ______________________________

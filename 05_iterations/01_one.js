@@ -26,7 +26,7 @@ for (let i = 0; i <= 10; i++) {
 
 
 // Tables
-for (let i = 1; i <= 10; i++) {
+for (let i = 2; i <= 10; i++) {
     // console.log(`Table no. : ${i}`);
 
     for (let j = 1; j <= 10; j++) {
@@ -40,7 +40,7 @@ for (let i = 1; i <= 10; i++) {
 // Loops on Array
 let myArray = ["bat", "cat", "rat"]
 
-for (let index = 0; index < array.length; index++) {
+for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
     // console.log(element);
 }
@@ -50,20 +50,20 @@ for (let index = 0; index < array.length; index++) {
 
 // Break and Continue
 
-// for (let index = 0; index <= 20; index++) {
-//     if (index ==5) {
-//         console.log("detected 5");
-//         break
-//     }
-//     console.log(`Value of i is ${index}`); 
-// }
+for (let index = 0; index <= 20; index++) {
+    if (index == 5) {
+        // console.log("Detected 5");
+        break
+    }
+    // console.log(`Value of i is ${index}`); 
+}
 
 
 for (let index = 0; index <= 20; index++) {
-    if (index ==5) {
-        console.log("detected 5");
+    if (index == 5) {
+        // console.log("detected 5");
         continue           //It skips the condition one time
     }
-    console.log(`Value of i is ${index}`); 
+    // console.log(`Value of i is ${index}`); 
 }
 

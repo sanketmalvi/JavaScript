@@ -1,5 +1,9 @@
 // for of loop
 
+// for (const iterator of object) {
+    
+// }
+
 // ["", "", ""]
 // [{}, {}, {}]
 

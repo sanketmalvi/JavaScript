@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: black; color: rgb(144, 143, 143);">
+
+
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+
+    div.className = 'main'
+    div.id = 'myId'
+    div.setAttribute('title', 'JavaScript Learning')
+    div.style.backgroundColor = 'green'
+    div.style.fontSize = "35px"
+    div.style.color = "white"
+
+    // div.innerText = "Welcome to the webpage"
+    const addText = document.createTextNode("Welcome to the webpage")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+</script>    
+
+</html>

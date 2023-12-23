@@ -1,4 +1,11 @@
-const coding = ["java", "pyhton", "c++", "ruby"]
+// forEach
+
+// array.forEach(element => {
+    
+// });
+
+
+const coding = ["java", "python", "c++", "ruby"]
 
 // coding.forEach( function (item) {
 //     console.log(item);
@@ -47,5 +54,5 @@ const myCoding = [
 
 
 myCoding.forEach( (item) => {
-    console.log(item.language);
+    console.log(item.fileExtension);
 })
