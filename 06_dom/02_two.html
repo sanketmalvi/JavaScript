@@ -14,10 +14,13 @@
     </div>
 </body>
 <script>
+
+    // Test it in Browser Console
+
     const parent = document.querySelector('.parent')
 
     // console.log(parent);
-    // console.log(parent.children);
+    // console.log(parent.children);      //HTML collection
     // console.log(parent.children[1].innerHTML);
 
 
@@ -26,11 +29,13 @@
     // }
 
 
+    // PARENT TO CHILD
     parent.children[1].style.color = 'orange'
     // console.log(parent.firstElementChild);
     // console.log(parent.lastElementChild);
     
 
+    // CHILD TO PARENT
     const dayOne = document.querySelector('.day')
     // console.log(dayOne);
     // console.log(dayOne.parentElement);  
@@ -40,9 +45,6 @@
 
     console.log("NODES: ", parent.childNodes);
 
-
-
-    
 
 </script>
 </html>
