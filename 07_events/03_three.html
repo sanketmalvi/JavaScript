@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: darkgray;">
+    <h1>Welcome to the Hello World</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+// setInterval(() => {
+//     console.log("sanket", Date.now());
+// }, 1000);
+
+
+// Another way
+
+// const sayDate = (str)=>{
+//     console.log(str,"Hitesh", Date.now());
+// }
+// const intervalId = setInterval(sayDate, 1000, "hi")
+
+// clearInterval(intervalId)
+
+
+
+
+// TASK
+
+document.querySelector('#start').addEventListener('click', ()=>{
+    startButton = setInterval(() => {
+    console.log("UnderTaker");
+    }, 1000);   
+})
+document.querySelector('#stop').addEventListener('click', ()=>{
+    clearInterval(startButton)
+    console.log("Stopped");
+})
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

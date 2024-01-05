@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body style="background-color: grey; color: aliceblue;">
+    <h2>Images</h2>
+    <ul id = 'images'>
+        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/19555765/pexels-photo-19555765/free-photo-of-portrait-of-egret-bird.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="photoshop"></li>
+        <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+        <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+         <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert('owl clicked')
+    // }
+
+
+    // attachEvent()
+    // jQuery - onEventListener
+
+    // LEARN ABOUT - type, timestamp, defaultPrevented,
+    // target, toElement, srcElement, currentTarget,
+    // clinetX, clientY, screenX, screenY,
+    // altkey, ctrlkey, shiftkey, keycode.
+
+
+    // Event propogation
+    // document.getElementById('images').addEventListener('click', (e) => {   // best approach to take event
+    //     console.log(`clicked insisde the ul`);
+    // },false) //Event bubbling
+    
+    // document.getElementById('owl').addEventListener('click', (e) => {
+    //     console.log(`owl clicked`);
+    //     // e.stopPropagation()  
+    // },false)
+
+    // document.getElementById('owl').addEventListener('click', (e) => {
+    //     console.log(`owl clicked`);
+    // },true) //Event capturing
+
+
+    // document.getElementById('google').addEventListener('click', (e)=>{
+    //     e.preventDefault();
+    //     console.log("google clicked");
+    // })
+
+
+
+// #####################  Real World Scenarios #######################
+
+// 1. Take the li images and dissapear on the click
+
+document.querySelector('#images').addEventListener('click', (e)=>{
+    // console.log(e.target.parentNode);
+
+    if(e.target.tagName === 'IMG'){
+    // e.target.parentNode.remove()      //1st approach
+    let removeIt = e.target.parentNode
+    removeIt.remove();                   //2nd approach
+}
+
+}, false)
+// removeIt.parentNode.removeChild(removeIt)  //3rd approach
+
+
+
+    
+
+
+</script>
+</html>
