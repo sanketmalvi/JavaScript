@@ -35,10 +35,10 @@ let myObj = {
 
 // Function
 const myFunction = function(){
-    // console.log("Helloworld")
+    console.log("Helloworld")
 }
-// console.log(myFunction);
-// console.log(typeof myFunction);
+console.log(myFunction);
+console.log(typeof myFunction);
 
 
 // Study more
@@ -57,8 +57,8 @@ let myName = "jack"
 let anothername = myName
 anothername = "chaiorcode"
 
-// console.log(myName);
-// console.log(anothername);
+console.log(myName);
+console.log(anothername);
 
 // -------------------
 

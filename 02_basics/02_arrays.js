@@ -1,10 +1,11 @@
 const marvel_heros = ["thor","Ironman", "spiderman" ]
 const dc_heros = ["superman", "flash", "batman"]
 
-// marvel_heros.push(dc_heros)                         //It will print array in array
+marvel_heros.push(dc_heros)                         //It will print array in array
 
 // console.log(marvel_heros);
-// console.log(marvel_heros[3][2]);
+console.log(marvel_heros[3][2]);                    //batman
+
 
 // const allHeros = marvel_heros.concat(dc_heros)       //It will merge in existing array
 // console.log(allHeros);
@@ -12,7 +13,7 @@ const dc_heros = ["superman", "flash", "batman"]
 
 // Works same as concat but here we can add multiple arrays using(...xyz)
 // const all_new_heros = [...marvel_heros, ...dc_heros]            // Spread Operator
-// console.log(all_new_heros);
+// console.log("A",all_new_heros);
 
 //+++++++++++++++++++++++++++++++++++++++++++++
 
@@ -26,17 +27,20 @@ const real_another_array = another_array.flat(Infinity)
 
 //+++++++++++++++++++++++++++++++++++++++++++++
 
+// For Check that it is a Array or not
+console.log(Array.isArray("Sanket"))     //false
 
-console.log(Array.isArray("Sanket"))
+// Convert in Array
+console.log(Array.from("Sanket"))        // ['S', 'a', 'n', 'k', 'e', 't']
 
-console.log(Array.from("Sanket"))
-
-console.log(Array.from({name: "Sanket"}))  //interesting
+// Interesting 
+console.log(Array.from({name: "Sanket"}))   // [] This method is not able to convert this Bcoz it confused whether it have to make array of keys or values.
 
 
 
 let score1 = 100
 let score2 = 200
-let score3 = 300
+let score3 = "Winning"
 
-// console.log(Array.of(score1, score2, score3));
+// Return a Array from set of elements
+console.log(Array.of(score1, score2, score3));       // [100, 200, 'Winning']

@@ -1,29 +1,29 @@
-// const userEmail = "sanket@ai"
-
-// if(userEmail) {
-//     console.log("got email");
-// }
-// else{
-//     console.log("Dont have email");
-// }
-
-
-
-// const userEmail = ""
-
-// if(userEmail) {
-//     console.log("got email");
-// }
-// else{
-//     console.log("Dont have email");
-// }
-
-
-
-
-const userEmail = []
+const userEmail = "sanket@ai"
 
 if(userEmail) {
+    console.log("got email");
+}
+else{
+    console.log("Dont have email");
+}
+
+
+
+const userEmail2 = ""
+
+if(userEmail2) {
+    console.log("got email");
+}
+else{
+    console.log("Dont have email");
+}
+
+
+
+
+const userEmail3 = []
+
+if(userEmail3) {
     console.log("got email");
 }
 else{
@@ -46,8 +46,9 @@ else{
 
 
 // Check Array 
+const email = []
 
-if(userEmail.length ===0) {
+if(email.length === 0) {
     console.log("array is empty");
 }
 
@@ -56,7 +57,7 @@ if(userEmail.length ===0) {
 
 const emptyObj = {}
 
-if(Object.keys(emptyObj).length ===0) {
+if(Object.keys(emptyObj).length === 0) {
     console.log("Object is empty");
 }
 
@@ -68,15 +69,16 @@ if(Object.keys(emptyObj).length ===0) {
 
 
 // Nullish Coalescing Operator (??): null undefined
+// It is basically a safety that it is null or not
 
 let val1;
-// val1 = 5 ?? 10
+// val1 = 5 ?? 10         //5
 
-// val1 = null ?? 10
+// val1 = null ?? 10     //10
 
-// val1 = undefined ?? 15
+// val1 = undefined ?? 15      //15
 
-val1 = null ?? 10 ?? 50
+val1 = null ?? 10 ?? 50        //10
 
 console.log(val1);
 
@@ -89,4 +91,4 @@ console.log(val1);
 //  condition ? true : false
  
  const iceTeaPrice = 100
- iceTeaPrice >= 80 ? console.log("less than 80") : console.log("more than 80");
+ iceTeaPrice <= 80 ? console.log("less than 80") : console.log("more than 80");

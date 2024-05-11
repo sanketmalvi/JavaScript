@@ -1,14 +1,19 @@
-// console.log("S");
-// console.log("A");
-// console.log("N");
-// console.log("K");
-// console.log("E");
-// console.log("T");
+function sayMyName(){
+        console.log("S");
+        console.log("A");
+        console.log("N");
+        console.log("K");
+        console.log("E");
+        console.log("T");
+    }
+
+// sayMyName()
+
 // ---------------------------------------------------------
 
-// function addTwoNumbers(num1, num2){
-//     console.log(num1 + num2);
-// }
+function addTwoNumbers(num1, num2){
+    console.log(num1 + num2);       //It will give 'undefined' bcoz its not return anything
+}
 
 // OR
 
@@ -19,12 +24,14 @@
 
 // OR
 
-function addTwoNumbers(num1, num2){
-    return num1 + num2
-}
+// function addTwoNumbers(num1, num2){
+//     return num1 + num2
+// }
 
 const Answer = addTwoNumbers(3, 5)
-// console.log("Result : ", Answer );
+console.log("Result : ", Answer );`x`
+
+
 
 // --------------------------------------------
 
@@ -48,8 +55,8 @@ function loginUserMessage(username = "sam"){       //Default parameter
     return `${username} just logged in`
 }
 
-// console.log(loginUserMessage("sanket"));
-// console.log(loginUserMessage());    //undefined
+console.log(loginUserMessage("sanket"));
+console.log(loginUserMessage());    //undefined : When not passing anything 
 
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
@@ -72,7 +79,7 @@ console.log(calculateCartPrice(100,500,600,350));
 function calculateCartPrice2(val1, val2, ...num2){        //Rest Operator
     return num2
 }
-console.log(calculateCartPrice2(100,500,600,350));      // val1:100, val2:500, num1: 600,350
+console.log(calculateCartPrice2(100,500,600,350));      // val1:100, val2:500, num2: 600,350
 
 
 // --------------------------------------------------

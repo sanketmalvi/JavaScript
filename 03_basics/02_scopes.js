@@ -7,15 +7,15 @@ if (true) {
 }
 // console.log(a);
 // console.log(b);
-// console.log(c);
+console.log(c);
 
 
 let z = 200
 if (true) {
     let z = 30
-    // console.log("Inner:",z);
+    console.log("Inner:",z);
 }
-// console.log(z);
+console.log("Outer:",z);
 
 
 // ------------------------------------------------
@@ -26,7 +26,7 @@ function one() {
 
     function two() {
         const website = "Utube"
-        // console.log(username);
+        console.log(username);
     }
     // console.log(website);
     two()
@@ -39,7 +39,7 @@ if (true) {
     const username = "sanket"
     if (username === "sanket") {
         const website = " youtube"
-        // console.log(username + website);
+        console.log(username + website);
     }
     // console.log(website);
 }
@@ -61,7 +61,7 @@ function addone(num) {
 // OR
 
 addTwo(5)
-const addTwo = function (num) {
+const addTwo = function (num) {                //Hoisting
     return num + 2
 }
  

@@ -28,7 +28,7 @@ for (const key in myObject) {
 const programming =["JS","PY","JS","CPP"]
 
 for (const key in programming) {
-    // console.log(programming[key]);    
+    console.log(programming[key]);    
     }
 
 

@@ -1,7 +1,7 @@
-// let  myname = 'Sanket'
-// let mywork = 'Developer'
+let  myname = 'Sanket'
+let mywork = 'Developer'
 
-// console.log(myname.trueLength);
+console.log(myname.trueLength);
 
 // ----------------------------------
 
@@ -22,7 +22,7 @@ Object.prototype.Hulk = () => {
     console.log(`Hulk is present in all the objects`);
 }
 
-// heroPower.Hulk()      //Access to object successfully
+heroPower.Hulk()      //Access to object successfully
 myHeros.Hulk()           //Access to arrays successfully
 
 
@@ -38,7 +38,7 @@ myHeros.Hulk()           //Access to arrays successfully
 Array.prototype.HiJohn = ()=> console.log(`Hi there`);
 
 // heroPower.HiJohn()         //Dont get access to Arrays
-// myHeros.HiJohn()              //Get access to Arrays
+myHeros.HiJohn()              //Get access to Arrays
 
 
 // ________________________________________________________

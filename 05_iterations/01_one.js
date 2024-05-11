@@ -16,10 +16,10 @@ for (let i = 0; i <=10; i++) {
 }
 
 
-for (let i = 0; i <= 10; i++) {
+for (let i = 0; i <= 3; i++) {
     // console.log(`Outer loop: ${i}`);
 
-    for (let j = 0; j <= 10; j++) {
+    for (let j = 0; j <= 3; j++) {
         // console.log(`inner loop ${j} and Outer loop: ${i}`);   
     }
 }
@@ -42,7 +42,7 @@ let myArray = ["bat", "cat", "rat"]
 
 for (let index = 0; index < myArray.length; index++) {
     const element = myArray[index];
-    // console.log(element);
+    console.log(element);
 }
 
 
@@ -59,11 +59,11 @@ for (let index = 0; index <= 20; index++) {
 }
 
 
-for (let index = 0; index <= 20; index++) {
+for (let index = 0; index <= 10; index++) {
     if (index == 5) {
-        // console.log("detected 5");
+        console.log("detected 5");
         continue           //It skips the condition one time
     }
-    // console.log(`Value of i is ${index}`); 
+    console.log(`Value of i is ${index}`); 
 }
 

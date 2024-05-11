@@ -5,7 +5,7 @@ const coding = ["java", "python", "c++", "ruby"]
 //     return items                                 //forEach dont return anything
 // })
 
-// console.log(values);
+// console.log(values);     //undefined
 
 
 
@@ -13,13 +13,13 @@ const coding = ["java", "python", "c++", "ruby"]
 
 const myNums = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// let newNums = myNums.filter( (num) => num > 4)   // Return automatically when use implicit
-// console.log(newNums);
+let newNums = myNums.filter( (num) => num > 4)   // Return automatically when use implicit
+console.log(newNums);
 
 
-// let newNums2 = myNums.filter( (num) => {
-//     return num > 4                      // When started a scope Then need to write return 
-// })    
+let newNums2 = myNums.filter( (num) => {
+    return num > 4                      // When started a scope Then need to write return 
+})    
 // console.log(newNums2);
 
 
@@ -27,15 +27,15 @@ const myNums = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // same operation using forEach
 
-// const newNums2 = []
+const newNums3 = []
 
-// myNums.forEach( (num) => {
-//     if (num > 4) {
-//         newNums2.push(num)
-//     }
-// })
+myNums.forEach( (num) => {
+    if (num > 4) {
+        newNums3.push(num)
+    }
+})
 
-// console.log(newNums2);
+console.log(newNums3);
 
 
 

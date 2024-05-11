@@ -1,0 +1,31 @@
+__Let__Var__Const__ 
+
+Const: when u assign it in memory U can't change it 
+
+Let_Var: Prefer not to use var because of issue in block and functional scope
+
+------------------------------------
+
+__Stack_and_Heap__
+
+When memory define in the STACK so u get the copy of the variable. Whatever U change will not reflect in original value.
+
+When memory define in HEAP u get the reference of original value.
+
+------------------------------------
+
+
+
+
+
+
+
+Basics -
+
+
+1.  (`  `)  =  String Interpulation
+
+2. function addTwoNumbers(num1, num2){    //num1 and num2 is a "Parameter"
+    return num1 + num2
+   }  
+   addTwoNumbers(3, 5)              // 3 and 5 pass as "Argument"

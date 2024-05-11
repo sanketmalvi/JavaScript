@@ -12,7 +12,7 @@
 const arr = [1, 2, 3, 3, 5, 6]
 
 for (const num of arr) {
-    // console.log(num);
+    console.log(num);
 }
 
 
@@ -20,7 +20,7 @@ for (const num of arr) {
 const greetings = "Hello welcome"
 
 for (const greet of greetings) {
-    // console.log(`Each char is ${greet}`);
+    console.log(`Each char is ${greet}`);
 }
 
 
@@ -37,7 +37,7 @@ map.set('USA', "AMerica")
 
 
 
-for (const [key, value] of map) {
+for (const [key, value] of map) {        //Destructuring of array
     // console.log(key, '-', value);
 }
 

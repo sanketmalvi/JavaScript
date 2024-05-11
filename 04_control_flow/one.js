@@ -8,7 +8,7 @@ if(isUserLoggedIn){
 //  < , > , <= , >= , == , != , === , !==
 
 if(2 === "2"){
-    // console.log("Executed");
+    console.log("Executed");
 }
 
 const temperature= 41

@@ -8,12 +8,13 @@ const user = {
     }
 }
 
-// user.welcomeMessage()
+user.welcomeMessage()
 
-// user.username = "sam"                      //Now context is changed
-// user.welcomeMessage()
+user.username = "sam"                      //Now context is changed
+user.welcomeMessage()
 
-console.log(this);   // {} : we r in node environment it gives empty bcz in this case there is no any cuurent context in global scope
+console.log(this);   // {}  
+// We are in node environment, it gives empty bcz in this case there is no any current context in global scope.
 
 // *** But  when u run it in browser u will see window object bcz in the browser, global object is window object ***
 
@@ -39,7 +40,8 @@ Two()
 
 
 
-const another = ()=>{          //Arrow Function
+//Arrow Function
+const another = ()=>{          
     let username = "john"
     console.log(this);     //{}
 }

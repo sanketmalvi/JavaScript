@@ -21,12 +21,13 @@ const JSUser = {
     lastLoginDays : ["monday", "Wednesday"]
 }  
 
-// console.log(JSUser.email);
-// console.log(JSUser["email"]);
-// console.log(JSUser["full name"]);
 
-// console.log(JSUser[mySym]);
-// console.log(typeof mySym);
+console.log(JSUser.email);
+console.log(JSUser["email"]);
+console.log(JSUser["Full name"]);
+
+console.log(JSUser[mySym]);
+console.log(typeof mySym);
 
 // ++++++++++++++++++++++++++++++++++++
 
@@ -35,8 +36,9 @@ JSUser.email = "sanket@chatgpt.com"
 console.log(JSUser["email"]);
 
 // Object.freeze(JSUser)
-JSUser.email = "sanket@gmail.com"
+// JSUser.email = "sanket@gmail.com"
 // console.log(JSUser);
+
 
 // ++++++++++++++++++++++++++++++++++++
 // Functions
@@ -51,3 +53,4 @@ JSUser.greetingTwo = function(){
 
 JSUser.greeting()
 JSUser.greetingTwo()
+console.log(JSUser);

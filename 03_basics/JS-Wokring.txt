@@ -1,6 +1,6 @@
 JavaScript Execution context -
 
-1. Global Execution conte xt
+1. Global Execution context
 
 2. Function Execution context :
 
