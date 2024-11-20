@@ -2,7 +2,7 @@
 const isUserLoggedIn = true
 
 if(isUserLoggedIn){
-    // console.log("Logged");
+    console.log("Logged");
 }
 
 //  < , > , <= , >= , == , != , === , !==
@@ -35,7 +35,7 @@ const score = 200
 
 const balance = 1000
 
-// if(balance > 500) console.log("test");       //Implicit Scope
+if(balance > 500) console.log("test");       //Implicit Scope
 
 
 
@@ -63,5 +63,5 @@ if(userLoggedIn && debitcard && id){
 }
 
 if(loggedInFromGoogle || loggedInFromEmail) {
-    console.log("user looged in");
+    console.log("user loged in");
 }

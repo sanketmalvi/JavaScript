@@ -4,7 +4,7 @@ const repoCount = 20
 
 // console.log(name + repoCount + " repositories");    // Outdated way
 
-//Modern Syntax
+//Modern Syntax: Template literal
 // console.log(`Hi I am ${name} and my repocount is ${repoCount}`);
 
 
@@ -23,12 +23,12 @@ console.log(gameName.indexOf('k'));       // 3
 const slice = gameName.substring(0,4)     // Sank
 //  console.log(slice);                   
 
-const anotherSlice = gameName.slice()  // Can give negative values
+const anotherSlice = gameName.slice(1, 3)  // Can give negative values
 // console.log(anotherSlice);
 
 const newString = "      sanket     "
 console.log(newString);
-console.log(newString.trim());
+console.log(newString.trim());       //REMOVE Spaces
 
 
 const url = "https://sanket.com/sanket%20portfolio"
@@ -39,5 +39,6 @@ const url = "https://sanket.com/sanket%20portfolio"
 
 const splitname = "sanket-portfolio-io"
 console.log(splitname.split('-'));
+
 
 

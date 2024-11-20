@@ -2,12 +2,12 @@ const score = 400   //automatically finds its number datatype
 // console.log(score);
 
 const balance = new Number(100)  //Specifically mentioned datatype
-// console.log(balance);
+console.log(balance);
 
 console.log(balance.toString());         // "100"
 console.log(typeof balance);
 console.log(balance.toString().length);  // 3
-console.log(balance.toFixed(2));         // 100.00
+console.log(balance.toFixed(2));         // 100.00 
 console.log(balance.toFixed(2).length);  // 6
 
 
@@ -23,7 +23,7 @@ console.log(hundreds.toLocaleString('en-IN'));  // 10,00,000
 
 console.log(Math);
 console.log(Math.abs(-4));     //Absolute : Make values +ve : 4
-console.log(Math.round(4.6));  //Round of values after decimal : 4
+console.log(Math.round(4.6));  //Round of values after decimal : 5
 console.log(Math.ceil(4.3))    // Take upper value : 5
 console.log(Math.floor(4.6));  // Take lower value : 4
 

@@ -1,7 +1,7 @@
 // let score = "33"
 // let score = "33abc"
 // let score = true
-let score = null
+// let score = null
 // let score = undefined
 
 
@@ -9,8 +9,8 @@ console.log(score);
 // console.log((score));  //as a method
 
 let valueInNumber = Number(score)  //CONVERT Any Datatype IN NUMBER
-// console.log(typeof valueInNumber); //number
-// console.log(valueInNumber);  // 0
+console.log(typeof valueInNumber); //number
+console.log(valueInNumber);  // 0
 
 
 // "33" => 33
@@ -24,7 +24,7 @@ let valueInNumber = Number(score)  //CONVERT Any Datatype IN NUMBER
 let isLoggedIn = 1
 
 let booleanIsLoggedIn = Boolean (isLoggedIn)  //  CONVERT IN BOOLEAN
-// console.log(booleanIsLoggedIn); //true
+console.log(booleanIsLoggedIn); //true
 
 // 1 => true; 0 => false
 // "" = false
@@ -33,12 +33,17 @@ let booleanIsLoggedIn = Boolean (isLoggedIn)  //  CONVERT IN BOOLEAN
 //------------------------------------------------------------------------
 
 
-let aNumber = 35
+let aNumber = undefined
 // let aNumber = true
 
 let stringNumber = String(aNumber)  //Convert in String
-// console.log(stringNumber);
-// console.log(typeof stringNumber);  //string
+console.log(stringNumber);
+console.log(typeof stringNumber);  //string
+
+// true => "true" string
+// null => "null" string
+// 123  => '123'  string
+// undefined => 'undefined'
 
 
 

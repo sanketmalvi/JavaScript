@@ -6,46 +6,80 @@
     <title>Document</title>
 </head>
 <body style="background-color: black; color: darkgray;">
-    <h1>Welcome to the Hello World</h1>
-    <button id="start">Start</button>
-    <button id="stop">Stop</button>
+    <div class="container" style="text-align: center;">
+        <h1 id="header">Welcome to the Hello World</h1>
+        <button id="start">Start</button>
+        <button style="margin-bottom: 24px;" id="stop">Stop</button>
+        <div id="display"></div>
+    </div>
 </body>
 
 <script>
 
 
-// Another way
 
-// const sayDate = (str)=>{
-//     console.log(str,"Hitesh", Date.now());
-// }
-// const intervalId = setInterval(sayDate(hi), 1000)
+const color = ['green', 'red', 'cyan', 'blue'];
 
-// clearInterval(intervalId)
+const heading = document.getElementById("header");
+const start = document.getElementById("start");
+const stop = document.getElementById("stop");
+const display = document.getElementById("display");
+
+let index = 0;
+let onStart;
+
+start.addEventListener( 'click', () => {
+    // Clear any existing interval
+    clearInterval(onStart);
+
+    onStart = setInterval(() => {
+        display.innerText += ' UnderTaker'
+
+        heading.style.color = color[index]
+        index = index + 1
+        // if(index == color.length) index = 0; 
+//or    
+        index = (index + 1) % color.length;
+
+    },1000 );
+})
+
+stop.addEventListener('click', ()=> {
+    clearInterval(onStart)
+})
 
 
 
 
-// TASK
+    // // Color array
+    // const colors = ['red', 'blue', 'green', 'yellow'];
+    // let colorIndex = 0;
+    // let startButton; // Global variable to hold the interval
 
-// document.querySelector('#start').addEventListener('click', ()=>{
-//     startButton = setInterval(() => {
-//     console.log("UnderTaker");
-//     }, 1000);   
-// })
-// document.querySelector('#stop').addEventListener('click', ()=>{
-//     clearInterval(startButton)
-//     console.log("Stopped");
-// })
+    // document.querySelector('#start').addEventListener('click', () => {
+    //     const displayElement = document.querySelector('#display');
+    //     const header = document.querySelector('#header');
 
+    //     // Start text update and color change every second
+    //     startButton = setInterval(() => {
+    //         displayElement.innerText += " UnderTaker"; // Appends 'UnderTaker' to display every second
 
+    //         // Change the color of the header based on the color array
+    //         header.style.color = colors[colorIndex];
+    //         colorIndex = (colorIndex + 1) % colors.length; // Loop through the color array
+    // //or
+    //         // colorIndex = colorIndex + 1; // Move to the next color
+    //         // if (colorIndex === colors.length) {
+    //         //     colorIndex = 0; // Reset to the first color if we reach the end
+    //         // }
 
+    //     }, 1000);
+    // });
 
-
-
-
-
-
-
+    // document.querySelector('#stop').addEventListener('click', () => {
+    //     clearInterval(startButton); // Stop the interval
+    //     document.querySelector('#display').innerText = "Stopped";
+    //     // The color stays as it is at the moment of stopping
+    // });
 </script>
 </html>

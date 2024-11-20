@@ -7,7 +7,7 @@ function sayMyName(){
         console.log("T");
     }
 
-// sayMyName()
+sayMyName()
 
 // ---------------------------------------------------------
 

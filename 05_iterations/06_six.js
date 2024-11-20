@@ -1,26 +1,36 @@
 const coding = ["java", "python", "c++", "ruby"]
 
-// const values = coding.forEach( (items) => {
-//     // console.log(items);
-//     return items                                 //forEach dont return anything
-// })
+const values = coding.forEach( (items) => {
+    // console.log(items);
+    return items                                 //forEach dont return anything
+})
 
-// console.log(values);     //undefined
+console.log(values);     //undefined
 
 
 
-// FILTERS
+
+
+/* FILTERS:
+
+-: Used to filter out elements from an array based on a condition.
+
+-: Returns a new array containing only the elements that satisfy the given condition (i.e., where the condition is true).
+
+-: The length of the returned array may be smaller than the original array because some elements may be filtered out.
+*/
 
 const myNums = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 
 let newNums = myNums.filter( (num) => num > 4)   // Return automatically when use implicit
 console.log(newNums);
 
 
 let newNums2 = myNums.filter( (num) => {
-    return num > 4                      // When started a scope Then need to write return 
+    return num > 7                      // When started a scope Then need to write return 
 })    
-// console.log(newNums2);
+console.log(newNums2);
 
 
 

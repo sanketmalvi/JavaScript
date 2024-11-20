@@ -10,6 +10,8 @@ accountEmail = "sm@gmail.com"
 accountPass = "9746"
 accountCity = "Betul"
 
+console.log(typeof accountState);
+
 
 console.table([accountId, accountEmail, accountPass, accountCity, accountState])
 // Use Console.table when you have to print multiple variables

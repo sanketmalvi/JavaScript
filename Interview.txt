@@ -29,3 +29,12 @@ Basics -
     return num1 + num2
    }  
    addTwoNumbers(3, 5)              // 3 and 5 pass as "Argument"
+
+
+3. Spread Operators works on all iterables i.e arrays, strings, maps, sets. Not Objects 
+
+    //SPREAD because on right side of =
+    const arr = [1, 2, ...[3, 4]];
+
+    //REST because on left side of =
+    const [a, b, ...others] = [1, 2, 3, 4, 5]

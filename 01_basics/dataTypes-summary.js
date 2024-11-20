@@ -16,7 +16,7 @@ const id = Symbol('123')
 const anotherId = Symbol('123')  //symbol
 
 // console.log(id === anotherId);  //false
-// console.log(typeof id);
+console.log(typeof anotherId);
 
 /*
 # Non-Primitive Data Types - (Reference)
@@ -33,6 +33,7 @@ let myObj = {
     add: "mumbai"
 }
 
+
 // Function
 const myFunction = function(){
     console.log("Helloworld")
@@ -47,7 +48,7 @@ console.log(typeof myFunction);
 // https://262.ecma-international.org/5.1/#sec-11.4.
 
 
-// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 // Stack (primitive), Heap (Non-Primitive)  
@@ -74,7 +75,6 @@ userTwo.email = "sanket@google.com"
 
 console.log(userOne.email);
 console.log(userTwo.email);
-
 
 
 

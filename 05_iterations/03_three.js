@@ -1,5 +1,8 @@
 // for of loop
 
+// Works With: Arrays, strings, sets, maps, NodeLists, and other iterable objects.
+// What It Iterates: The values of the iterable.
+
 // for (const iterator of object) {
     
 // }
@@ -12,7 +15,7 @@
 const arr = [1, 2, 3, 3, 5, 6]
 
 for (const num of arr) {
-    console.log(num);
+    // console.log(num);
 }
 
 
@@ -20,7 +23,7 @@ for (const num of arr) {
 const greetings = "Hello welcome"
 
 for (const greet of greetings) {
-    console.log(`Each char is ${greet}`);
+    // console.log(`Each char is ${greet}`);
 }
 
 
@@ -31,14 +34,14 @@ for (const greet of greetings) {
 const map = new Map()
 map.set('state', "MP")
 map.set('In', "India")
-map.set('USA', "AMerica")
+map.set('USA', "America")
 
-// console.log(map);
+console.log(map);
 
 
 
 for (const [key, value] of map) {        //Destructuring of array
-    // console.log(key, '-', value);
+    console.log(key, '-', value);
 }
 
 
@@ -55,3 +58,26 @@ const myObject = {
 
 
 
+
+const restaurant = {
+    name: 'Classico Italiano',
+    location: 'Via Angelo Tavanti 23, Firenze, Italy',
+    categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+    starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+    mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+}
+
+    const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+    for(const item of menu) console.log(item);
+// =====================
+
+
+    for(const item of menu.entries()) {
+        console.log(`${item[0] + 1}: ${item[1]}`);
+        // console.log(`${item}`);
+    }
+// ------------------
+
+
+    

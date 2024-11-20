@@ -3,8 +3,8 @@ let mywork = 'Developer'
 
 console.log(myname.trueLength);
 
-// ----------------------------------
-
+// ---------- ------------------------
+  
 
 let myHeros = ['thor', 'spiderman' ]
 
@@ -24,6 +24,7 @@ Object.prototype.Hulk = () => {
 
 heroPower.Hulk()      //Access to object successfully
 myHeros.Hulk()           //Access to arrays successfully
+
 
 
 // Here, we added functionality to objects as a prototype and as we know all the strings, arrays and functions is eventually a object So that functionality can access by all the strings, arrays and functions.

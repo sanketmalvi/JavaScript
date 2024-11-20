@@ -26,7 +26,7 @@ console.log(this);   // {}
 
 function one(){
     let username = "sanket"
-    // console.log(this.username);          //Cannot use in functions
+    console.log(this.username);          //Cannot use in functions
 }
 one()
 
@@ -45,26 +45,28 @@ const another = ()=>{
     let username = "john"
     console.log(this);     //{}
 }
-
+another();
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-// const addTwo = (num1, num2) => {
-//     return num1 + num2
-// }
-// console.log(addTwo(3,5));
+const addTwo = (num1, num2) => {
+    return num1 + num2
+}
+console.log(addTwo(3,5));
 
 
 // OR
 
-// const addTwo = (num1, num2) => num1 + num2              //Implicit return
+const addTwwo = (num1, num2) => num1 + num2              //Implicit return
 
 // OR
 
-const addTwo = (num1, num2) => (num1 + num2)
+const addingTwo = (num1, num2) => (num1 + num2)
 
 console.log(addTwo(8,9));
+console.log(addTwwo(8,9));
+console.log(addingTwo(8,9));
 
 
 

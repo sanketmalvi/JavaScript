@@ -14,6 +14,15 @@ console.log(`Total is : ${Total}`);
 const myTotal = nums.reduce((acc,curval) => acc + curval, 2)
 console.log(`myTotal is : ${myTotal}`);
 
+/* Explanation:
+initial value passed in acccumulator is 2
+
+step1: acc: 2 , curcal: 1   =>   acc + curval ie  2 + 1 = 3  =>  now accumulator is 3 
+step2: acc: 3 , curcal: 2   =>   acc + curval ie  3 + 2 = 5  =>  now accumulator is 5
+step3: acc: 5 , curcal: 3   =>   acc + curval ie  5 + 3 = 8  =>  now accumulator is 8
+
+So, MyTotal is 8
+*/
 
 // ______________________________
 
@@ -61,3 +70,4 @@ console.log(result);
 // Simplest Way
 const res = [].concat(...arr)
 console.log(res);
+

@@ -6,22 +6,32 @@
     <title>Document</title>
 </head>
 <body style="background-color: #212121;">
-<!-- 0	UNSENT	Client has been created. open() not called yet.
-1	OPENED	open() has been called.
-2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
-3	LOADING	Downloading; responseText holds partial data.
-4	DONE	The operation is complete. -->
+     
+<!-- 5 types of ready states. An xhr client exists in one of the following.
+
+ value | state  |  Description
+
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been calledkj.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+-->
 </body>
 <script>
+
+//In previous time when fetch not introduced XmlHttpRequest(xhr) was used to send and receive data.
+
     const requestUrl = 'https://api.github.com/users/sanketmalvi'
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
-        console.log(xhr.readyState);
+
+    const xhr = new XMLHttpRequest();   //By this method can send and receive data requests.
+    xhr.open('GET', requestUrl)           //Take 2 parameters: Method and String i.e API Link.
+    xhr.onreadystatechange = function(){  //Tracking the state when it changes.
+        console.log(xhr.readyState);      //Return a number representing the state of request. 
         if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
+            const data = JSON.parse(this.responseText)  //responseText gives the whole data.
             console.log(typeof data);
-            // console.log(data.avatar_url);
+            console.log(data.avatar_url);
             console.log(data.followers);
         }
     }
@@ -31,6 +41,103 @@
 
 
 
-<!-- task -->
+<!-- Task :  Take photo and followers count from Api and create card dynamically-->
 
-take photo url create card
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Info</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #333;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <button id="fetchDataBtn">Get GitHub User Info</button>
+    <div id="userCardContainer"></div>
+
+    <script>
+        const requestUrl = 'https://api.github.com/users/sanketmalvi';
+        const fetchDataBtn = document.getElementById('fetchDataBtn');
+        const userCardContainer = document.getElementById('userCardContainer');
+
+        fetchDataBtn.addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', requestUrl);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    const data = JSON.parse(this.responseText);
+                    createCard(data.avatar_url, data.followers);
+                }
+            };
+            xhr.send();
+        });
+
+        function createCard(avatarUrl, followers) {
+            // Create a card element
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            // Add avatar image to the card
+            const img = document.createElement('img');
+            img.src = avatarUrl;
+            card.appendChild(img);
+
+            // Add followers count to the card
+            const followersText = document.createElement('p');
+            followersText.innerText = `Followers: ${followers}`;
+            card.appendChild(followersText);
+
+            // Append the card to the container
+            userCardContainer.appendChild(card);
+        }
+    </script>
+</body>
+</html> -->

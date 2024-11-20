@@ -6,16 +6,27 @@
     <title>Take image from API</title>
     <style>
 
-        .card {
+button{
+    font-family: cursive;
+    font-size: large;
+    width: 100%;
+    background: darkgray;
+    margin-bottom: 50px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 5px; /* 5px rounded corners */
 }
 img {
   border-radius: 5px 5px 0 0;
-  width: 100%;
+  width: 70%;
 }
 .container {
+  text-align: center;
   padding: 2px 16px;
 }
 .card:hover {
@@ -29,30 +40,35 @@ img {
 
     <div class="card">
         <img id="img" src="" >
-        <div class="container">
-          <h4><b></b></h4>
-          <p></p>
-        </div>
-      </div>
+    </div>
+    <div class="container">
+      <h2></h2>
+    </div>
 </body>
 <script>
 const requestUrl = 'https://api.github.com/users/sanketmalvi'
-    let avatar, follower;
+    
+
+document.querySelector('.btn').addEventListener('click', ()=>{
     const xhr = new XMLHttpRequest();
     xhr.open('GET', requestUrl)
     xhr.onreadystatechange = function(){
-        console.log(xhr.readyState);
         if (xhr.readyState === 4) {
             const data = JSON.parse(this.responseText)
-            avatar = data.avatar_url;
-            follower = data.followers;
+            const avatar = data.avatar_url;
+            const followers = data.followers;
+
+            card(avatar, followers);
         }
     }
-
-   document.querySelector('.btn').addEventListener('click', ()=>{
-    document.getElementById('img').innerHTML= src= "avatar"
-    })
     xhr.send();
+    })
+
+
+    const card = function(avatar, followers) {
+      document.getElementById('img').setAttribute('src', avatar)
+      document.querySelector('h2').innerText = `followers: ${followers}`
+    }
 
 </script>
 </html>

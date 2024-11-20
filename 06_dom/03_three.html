@@ -14,7 +14,7 @@
     console.log(div);
 
     div.className = 'main'
-    div.id = 'myId'
+    // div.id = 'myId'
     div.setAttribute('title', 'JavaScript Learning')
     div.style.backgroundColor = 'green'
     div.style.fontSize = "35px"
@@ -25,6 +25,24 @@
     div.appendChild(addText)
 
     document.body.appendChild(div)
+    
 </script>    
 
 </html>
+
+
+<!-- NOTE:  setAttribute method is optimised compare to .id, .className, .innerText,  Because setAttribute directly add property to the element and these methods are first it will take the element then overwrite on it. SetAttribute prevents traversing of round trip. 
+-->
+
+
+
+
+<!-- Diff. bw innerText,  TextContent, and innerHTML
+ 
+- InnerText shows the value that is visible only
+
+- TextContent shows the whole value even if this hidden
+
+- innerHTML shows with the HTML tags 
+
+-->

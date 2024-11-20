@@ -36,13 +36,16 @@ const obj4 = {obj1, obj2}  // It will add object in object
 
 const obj5 = Object.assign({}, obj1, obj2)  //Add all key-value pair in single object  
 
+console.log("obj4", obj4);
+console.log("obj5", obj5);
+
 //Copy all the parameters of obj1 & obj2 in target object i.e obj5, but when do not add empty object then all values will goes in obj1.
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 
 // Best Way
 const obj6 = {...obj1, ...obj2, ...obj4}         //Spread Operator
-// console.log(obj6);
+console.log('obj6',obj6);
 
 
 

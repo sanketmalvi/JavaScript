@@ -3,7 +3,7 @@ var c = 300
 if (true) {
     let a = 10
     const b = 20                               //Block Scope
-    var c = 30
+    var c = 30           //In case of (var) It would affect outside the block scope i.e outside 'c'
 }
 // console.log(a);
 // console.log(b);
@@ -14,6 +14,8 @@ let z = 200
 if (true) {
     let z = 30
     console.log("Inner:",z);
+
+    
 }
 console.log("Outer:",z);
 
@@ -60,8 +62,8 @@ function addone(num) {
 
 // OR
 
-addTwo(5)
-const addTwo = function (num) {                //Hoisting
-    return num + 2
-}
+// addTwo(5)
+// const addTwo = function (num) {                //Hoisting
+//     return num + 2
+// }
  

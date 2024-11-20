@@ -21,34 +21,42 @@
     // }
 
 
-    // attachEvent()
-    // jQuery - onEventListener
-
-    // LEARN ABOUT - type, timestamp, defaultPrevented,
-    // target, toElement, srcElement, currentTarget,
-    // clinetX, clientY, screenX, screenY,
-    // altkey, ctrlkey, shiftkey, keycode.
+// NOTE: In JavaScript, both addEventListener() and onclick are used to handle events like clicks, but they function differently. While addEventListener() allows multiple event listeners and better control over event propagation, onclick is limited to a single event handler and gets overwritten.
 
 
-    // Event propogation
-    // document.getElementById('images').addEventListener('click', (e) => {   // best approach to take event
-    //     console.log(`clicked insisde the ul`);
-    // },false) //Event bubbling
+    // Event propogation: 1-Event bubbling,  2-Event capturing
+
+    document.getElementById('images').addEventListener('click', (e) => {   // best approach to take event
+        console.log(`clicked insisde the ul`);
+    },false) //Event bubbling   i.e. By Default  
     
-    // document.getElementById('owl').addEventListener('click', (e) => {
+
+
+    // document.getElementById('owl').addEventListener('click', (e) => {  // e is the Event Object
     //     console.log(`owl clicked`);
     //     // e.stopPropagation()  
-    // },false)
+    // },false)           //false is 3rd parameter which is by default thatswhy we dont write it.
 
-    // document.getElementById('owl').addEventListener('click', (e) => {
-    //     console.log(`owl clicked`);
-    // },true) //Event capturing
+    /*
+     EXPLANATION :  Here in the above example, owl is under ul so when we click on owl which event will trigger? Here comes the concept of Event Bubbling : Bubbling is by default and it bubble up from inside to outside so first inside event i.e. owl will trigger then outside ul will be triggered.
+    
+     Here in case of capturing it goes Top to Bottom. If we add true on both event so ul will trigger first then owl.
+
+     If we won't want to bubble up to outside if we click on owl so we can use 'e.stopPropagation'
+     So that only owl will triger.
+    */
+
+    document.getElementById('owl').addEventListener('click', (e) => {
+        console.log(`owl clicked`);
+    },true) //Event capturing
+
+// ------------------------------------------------
 
 
-    // document.getElementById('google').addEventListener('click', (e)=>{
-    //     e.preventDefault();
-    //     console.log("google clicked");
-    // })
+    document.getElementById('google').addEventListener('click', (e)=>{
+        e.preventDefault();  //This method prevents its default behaviour 
+        console.log("google clicked");
+    })
 
 
 
@@ -57,21 +65,44 @@
 // 1. Take the li images and dissapear on the click
 
 document.querySelector('#images').addEventListener('click', (e)=>{
-    // console.log(e.target.parentNode);
+    console.log(e.target.parentNode);
 
-    if(e.target.tagName === 'IMG'){
-    // e.target.parentNode.remove()      //1st approach
-    let removeIt = e.target.parentNode
-    removeIt.remove();                   //2nd approach
+    if(e.target.tagName === 'IMG'){   //this is check bcz click on li will remove whole ul
+    e.target.parentNode.remove()      //1st approach
+    // let removeIt = e.target.parentNode
+    // removeIt.remove();                   //2nd approach
 }
 
 }, false)
 // removeIt.parentNode.removeChild(removeIt)  //3rd approach
 
-
-
-    
-
-
 </script>
 </html>
+
+
+
+
+<!--
+
+    LEARN ABOUT - type, timestamp, defaultPrevented,
+    target, toElement, srcElement, currentTarget,
+    clinetX, clientY, screenX, screenY,
+    altkey, ctrlkey, shiftkey, keycode.
+
+Explanation:
+
+event.type: Logs the type of event (in this case, "click"). 
+
+event.timeStamp: Provides the time when the event was created.
+
+event.target: Refers to the element that was clicked (<button>).
+
+event.currentTarget: The element to which the event handler is attached (also the <button>).
+
+event.clientX and event.clientY: Provide the mouse pointer's position relative to the visible area (viewport).
+
+event.screenX and event.screenY: Provide the mouse pointer's position relative to the whole screen.
+
+toElement: refers to the element that the cursor moves into during a mouseover or mouseout event.
+
+-->

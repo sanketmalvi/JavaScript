@@ -17,9 +17,9 @@ const myArr2 = new Array(1, 2, 3, 4)
 // myArr.shift()          //Remove the first value
 
 
-// console.log(myArr.includes(8));
-// console.log(myArr.indexOf(9));
-// console.log(myArr.indexOf(3));
+console.log(myArr.includes(8));     //false
+console.log(myArr.indexOf(9));      // -1
+console.log(myArr.indexOf(3));      // 3
 
 
 const newArr = myArr.join()       //Adds all the elements of an array into a string
@@ -43,7 +43,7 @@ console.log("B ", myArr);
 
 const myn2 = myArr.splice(1, 3) //In splice range portion will remove from original array   
 console.log(myn2);
-console.log("C ", myArr);      
+console.log("C ", myArr);      // c [0, 4, 5]
 
 
 /* NOTE-

@@ -17,12 +17,14 @@
         li.innerHTML = `${language}`
         document.querySelector('.language').appendChild(li)
     }
-    addLanguage("python")
     addLanguage("Java")
+    addLanguage("Python")
+
+    // It is the basic way of adding element But there is a prblm that using innerHTML it is traversing whole tree to add the element because we added in last. So suppose we have 1000s line of code then it traverse tree whenever the function calls. 
 
 
 
-    // OPTIMIZED WAY
+    // OPTIMIZED WAY : here we just create a Textnode and append it to li
 
     function addOptiLanguage(lang){
         const li = document.createElement('li')
@@ -46,12 +48,14 @@
 
 
     // EDit
-    const firstLang = document.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>TypeScript</li>'
+    // const firstLang = document.querySelector("li:first-child")
+    // firstLang.outerHTML = '<li>TypeScript</li>'
 
     // REMOVE
-    const lastLang = document.querySelector('li:last-child')
-    lastLang.remove()
+    // const lastLang = document.querySelector('li:last-child')
+    // lastLang.remove()
+
+
 
 </script>
 
