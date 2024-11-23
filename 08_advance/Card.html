@@ -47,28 +47,57 @@ img {
 </body>
 <script>
 const requestUrl = 'https://api.github.com/users/sanketmalvi'
+const btn = document.querySelector('.btn');
+
     
+//Using XMLHTTPRequest
 
-document.querySelector('.btn').addEventListener('click', ()=>{
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', requestUrl)
-    xhr.onreadystatechange = function(){
-        if (xhr.readyState === 4) {
-            const data = JSON.parse(this.responseText)
-            const avatar = data.avatar_url;
-            const followers = data.followers;
+// btn.addEventListener('click', ()=>{
+//     const xhr = new XMLHttpRequest();
+//     xhr.open('GET', requestUrl)
+//     xhr.onreadystatechange = function(){
+//         if (xhr.readyState === 4) {
+//             const data = JSON.parse(this.responseText)
+//             const avatar = data.avatar_url;
+//             const followers = data.followers;
 
-            card(avatar, followers);
-        }
-    }
-    xhr.send();
-    })
+//             card(avatar, followers);
+//         }
+//     }
+//     xhr.send();
+//     })
+// ______________________________________________________________________
+
+// Using fetch: with Async Await
+
+  // btn.addEventListener('click', () => {
+  //   const getData = async () => {
+  //     try {
+  //       const response = await fetch ('https://api.github.com/users/sanketmalvi')
+  //       const data = await response.json();
+  //       card(data.avatar_url, data.followers)
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   getData()
+  // })
+// ________________________________________________________________________
+
+// Using fetch: with .then .catch
+
+btn.addEventListener('click', () => {
+  fetch('https://api.github.com/users/sanketmalvi')
+  .then( (response) => response.json())
+  .then( (data) => card(data.avatar_url, data.followers))
+  .catch( (error) => console.log(error))  
+})
 
 
-    const card = function(avatar, followers) {
-      document.getElementById('img').setAttribute('src', avatar)
-      document.querySelector('h2').innerText = `followers: ${followers}`
-    }
+  const card = function(avatar, followers) {
+    document.getElementById('img').setAttribute('src', avatar)
+    document.querySelector('h2').innerText = `followers: ${followers}`
+  }
 
 </script>
 </html>

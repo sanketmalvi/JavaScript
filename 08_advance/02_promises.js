@@ -76,7 +76,7 @@ promiseFive = new Promise ( (resolve, reject) =>{
     }, 1000);
 });
 
-// Another way instead of then/catch using async await
+// Another way instead of then/catch consuming above promise using async await
 
 async function consumePromiseFive(){
     try {
@@ -91,14 +91,14 @@ consumePromiseFive()
 
 
 
-// -----------------------------
+// -----------------REAL Example--------------------------
 
 // get data using fetch method
 
 // async function getAllUsers(){
 //     try {
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
-//         const data = await response.json()           //Convert data in JSON from string format that will take time so we use wait here
+//         const data = await response.json()       //Convert data in JSON from string format will take time so we use await here
 //         console.log(data);
 //     } 
 //     catch (error) {
@@ -117,5 +117,5 @@ fetch('https://jsonplaceholder.typicode.com/users')
 .catch( (error) => console.log(error))
 
 
-// Click to Know More
+// ********** MUST READ: Click to Know More *************
 // https://developer.mozilla.org/en-US/docs/Web/API/fetch

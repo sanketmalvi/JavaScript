@@ -31,9 +31,9 @@ function User (userName, logincount, isloggedin) {
 
 // const userOne = User("sanket", 5, true)
 // const userTwo = User("Jack", 4, false)
-// console.log(userOne);
+// console.log(userOne);             // Expected Output: {Jack, 4, false}
 
-// In this case value of userTwo is overwrite in userOne
+// In this case values is overwrite in memory 
 
 // To avoid prblms use (new) keyword
 
