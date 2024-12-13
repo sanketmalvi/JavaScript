@@ -53,12 +53,12 @@ const promiseFour = new Promise ( (resolve, reject)=>{
 })
 
 // promiseFour.then( (user)=>{
-//     // console.log(user);
-//     return user.username
+//     console.log(user);
+//     return user.username     //It returned in next .then
 // }).then( (username) =>{
-//     // console.log(username);
-// }).catch( (error)=>{                     //Behind the scene: then is connected with resolve
-//     // console.log('ERROR: Something went Wrong');
+//     console.log(username);
+// }).catch( (error)=>{                     //Behind the scene: catch is connected with reject
+//     console.log('ERROR: Something went Wrong');
 // }).finally(()=> console.log("The promise is either resolve or rejected"))
 
 
@@ -81,9 +81,9 @@ promiseFive = new Promise ( (resolve, reject) =>{
 async function consumePromiseFive(){
     try {
         const response = await promiseFive
-        // console.log(response);
+        console.log(response);
     } catch (error) {
-        // console.log(error);
+        console.log(error);
     }
 }
 consumePromiseFive()
@@ -111,10 +111,10 @@ consumePromiseFive()
 
 // Same using then/catch
 
-fetch('https://jsonplaceholder.typicode.com/users')
-.then( (response) => {return response.json()})
-.then( (data) => console.log(data))
-.catch( (error) => console.log(error))
+// fetch('https://jsonplaceholder.typicode.com/users')
+// .then( (response) => {return response.json()})
+// .then( (data) => console.log(data))
+// .catch( (error) => console.log(error))
 
 
 // ********** MUST READ: Click to Know More *************

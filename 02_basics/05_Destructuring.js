@@ -97,3 +97,15 @@ console.log(a, b);
 // nested
 const { fri: {open, close} } = openingHours;
 console.log(open, close);
+
+
+//______________________Rest Operators Example___________________________
+
+const [aa, bb, ...others] = [1, 2, 3, 4, 5];
+console.log(aa, bb, others);
+
+
+const { id, names, ...rest } = { id: 1, name: "John", age: 30, city: "New York" };
+console.log(id); // 1
+console.log(names); // "John"
+console.log(rest); // { age: 30, city: "New York" } 

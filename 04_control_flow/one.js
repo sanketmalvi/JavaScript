@@ -65,3 +65,16 @@ if(userLoggedIn && debitcard && id){
 if(loggedInFromGoogle || loggedInFromEmail) {
     console.log("user loged in");
 }
+
+// Example
+const guest = 0;
+const Check = guest || 10 ;
+console.log(Check);  //10        Because 0 is a falsy Value
+
+// But when we want that value even if it is 0 then
+
+//Nullish Operator(??): null or undefined (Not 0 or '')
+
+const check2 = guest ?? 10
+console.log(check2);  //0
+
