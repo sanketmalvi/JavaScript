@@ -45,6 +45,26 @@ const myn2 = myArr.splice(1, 3) //In splice range portion will remove from origi
 console.log(myn2);
 console.log("C ", myArr);      // c [0, 4, 5]
 
+// REVERSE
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'g', 'f'];
+console.log(arr2.reverse());
+console.log(arr2);            //mutate the original array
+
+///////////////////////////////////////
+// The new at Method
+const arr = [23, 11, 64];
+console.log(arr[0]);
+console.log(arr.at(0));
+
+// getting last array element
+console.log(arr[arr.length - 1]);
+console.log(arr.slice(-1)[0]);
+console.log(arr.at(-1));
+
+console.log('jonas'.at(0));
+console.log('jonas'.at(-1));
+
 
 /* NOTE-
 JavaScript array-copy-operation create shallow copies.
