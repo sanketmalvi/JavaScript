@@ -16,21 +16,24 @@ let name = "sanket"
 let age = 22
 let isLoggedIn = false
 
+// DataTypes: Primitive Types
+/*
+1.  number => 2 to power 53
+2.  bigint => More than 2 to power 53
+3.  string => ""
+4.  boolean => true/false
+5.  null => stanalone value  e.g. let name = null;
+6.  undefined =>  e.g. let name;
+7.  symbol => unique  e.g. const uniqueId = Symbol("id");
 
 
-// number => 2 to power 53
-// bigint
-// string => ""
-// boolean => true/false
-// null => stanalone value
-// undefined => 
-// symbol => unique
-
+*/
 
 
 // object
 
-console.log(typeof "Sanket");
-console.log(typeof age);
+console.log(typeof "Sanket"); //string
+console.log(typeof age);    //number
+log(typeof isLoggedIn); //boolean
 console.log(typeof undefined); //undefined
 console.log(typeof null); //object

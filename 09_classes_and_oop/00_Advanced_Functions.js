@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+
 ///////////////////////////////////////
 // Default Parameters
 const bookings = [];
@@ -23,12 +23,12 @@ const createBooking = function (
   bookings.push(booking);
 };
 
-createBooking('LH123');
-createBooking('LH123', 2, 800);
-createBooking('LH123', 2);
-createBooking('LH123', 5);
+// createBooking('LH123');
+// createBooking('LH123', 2, 800);
+// createBooking('LH123', 2);
+// createBooking('LH123', 5);
 
-createBooking('LH123', undefined, 1000);
+// createBooking('LH123', undefined, 1000);
 
 
 ///////////////////////////////////////
@@ -44,9 +44,9 @@ const checkIn = function (flightNum, passenger) {
   passenger.name = 'Mr. ' + passenger.name;
 
   if (passenger.passport === 24739479284) {
-    alert('Checked in');
+    // alert('Checked in');
   } else {
-    alert('Wrong passport!');
+    // alert('Wrong passport!');
   }
 };
 
@@ -92,12 +92,11 @@ transformer('JavaScript is the best!', oneWord);
 const high5 = function () {
   console.log('👋');
 };
-document.body.addEventListener('click', high5);
+// document.body.addEventListener('click', high5);
 ['Jonas', 'Martha', 'Adam'].forEach(high5);
 
 
-///////////////////////////////////////
-// Functions Returning Functions
+// _________Functions Returning Functions___________//
 const greet = function (greeting) {
   return function (name) {
     console.log(`${greeting} ${name}`);
@@ -112,12 +111,10 @@ greet('Hello')('Jonas');
 
 // Challenge
 const greetArr = greeting => name => console.log(`${greeting} ${name}`);
-
 greetArr('Hi')('Jonas');
 
 
-///////////////////////////////////////
-// The call and apply Methods
+/////// -------------------The call and apply Methods-----------------------///////
 const lufthansa = {
   airline: 'Lufthansa',
   iataCode: 'LH',
@@ -145,7 +142,7 @@ const book = lufthansa.book;
 // Does NOT work
 // book(23, 'Sarah Williams');
 
-// Call method
+////-----------Call method--------------////
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
 
@@ -160,42 +157,41 @@ const swiss = {
 
 book.call(swiss, 583, 'Mary Cooper');
 
-// Apply method
-const flightData = [583, 'George Cooper'];
-book.apply(swiss, flightData);
+////------ Apply method--------////
+const flightData = [583, 'George Cooper'];  
+book.apply(swiss, flightData);    //when passing an array use 'Apply' method
 console.log(swiss);
 
-book.call(swiss, ...flightData);
+book.call(swiss, ...flightData);  //Or can pass with spread operator
 
-///////////////////////////////////////
-// The bind Method
+
+/////------ The bind Method--------//////
 // book.call(eurowings, 23, 'Sarah Williams');
 
-const bookEW = book.bind(eurowings);
-const bookLH = book.bind(lufthansa);
+const bookEW = book.bind(eurowings);     //Does the same thing as call and Apply
+const bookLH = book.bind(lufthansa);     //Stored in the variable
 const bookLX = book.bind(swiss);
 
-bookEW(23, 'Steven Williams');
+bookEW(23, 'Steven Williams');           //Calling
 
 const bookEW23 = book.bind(eurowings, 23);
 bookEW23('Jonas Schmedtmann');
 bookEW23('Martha Cooper');
 
-// With Event Listeners
+
+//_____ With Event Listeners_____//
 lufthansa.planes = 300;
 lufthansa.buyPlane = function () {
   console.log(this);
-
   this.planes++;
   console.log(this.planes);
 };
 // lufthansa.buyPlane();
 
-document
-  .querySelector('.buy')
-  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+// document.querySelector('.buy').addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
 
-// Partial application
+
+//////// Partial application //////////
 const addTax = (rate, value) => value + value * rate;
 console.log(addTax(0.1, 200));
 
@@ -213,7 +209,7 @@ const addTaxRate = function (rate) {
 const addVAT2 = addTaxRate(0.23);
 console.log(addVAT2(100));
 console.log(addVAT2(23));
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -293,6 +289,7 @@ poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
 
 // [5, 2, 3]
 // [1, 5, 3, 9, 6, 1]
+*/
 
 
 ///////////////////////////////////////
@@ -317,7 +314,7 @@ runOnce();
   var notPrivate = 46;
 }
 // console.log(isPrivate);
-console.log(notPrivate);
+// console.log(notPrivate);
 
 
 ///////////////////////////////////////
@@ -333,9 +330,9 @@ const secureBooking = function () {
 
 const booker = secureBooking();
 
-booker();
-booker();
-booker();
+booker();     // 1 passengers
+booker();     // 2 passengers
+booker();     // 3 passengers
 
 console.dir(booker);
 
@@ -382,7 +379,7 @@ const boardPassengers = function (n, wait) {
 
 const perGroup = 1000;
 boardPassengers(180, 3);
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #2
