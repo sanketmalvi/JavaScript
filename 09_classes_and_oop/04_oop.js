@@ -39,7 +39,7 @@ function User (userName, logincount, isloggedin) {
 
 const userOne = new User("sanket", 5, true)
 const userTwo = new User("Jack", 4, false)
-console.log(userOne);
+console.log(userOne); // Expected Output: {sanket, 5, true}
 
 
 

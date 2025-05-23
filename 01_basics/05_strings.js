@@ -1,5 +1,5 @@
 // basics
-const name = "sanket "
+const name = "sanket " //String Literal
 const repoCount = 20
 
 // console.log(name + repoCount + " repositories");    // Outdated way
@@ -10,7 +10,7 @@ const repoCount = 20
 
 // ---------------------------
 
-// Another way of declare string
+// Another way of declare string: String constructor
 const gameName = new String('sanketsc')  //if run it in console will get the different methods
 
 console.log(gameName[0]);                 // S
@@ -59,21 +59,23 @@ checkBaggage('Got some snacks and a gun for protection');
 const splitname = "sanket-portfolio-io"
 console.log(splitname.split('-'));    //return in Array
 
-const [firstName, lastName] = 'Coder Sanket'.split(' ');
- 
+const [firstName, lastName] = 'Coder Sanket'.split(' '); // Destructuring
+console.log([firstName, lastName]); // [ 'Coder', 'Sanket' ]
+
 const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
-console.log(newName);
+console.log(newName); // Mr. Coder SANKET
 
 
 //////////////////////////////////////////////////////////////
 const airline = 'TAP Air Portugal';
 const plane = 'A320';
 
-console.log(airline.slice(0, airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+console.log(airline.slice(0, airline.indexOf(' ')));  // TAP   
+console.log(airline.slice(airline.lastIndexOf(' ') + 1));   // Portugal 
 
-console.log(airline.slice(-2));
-console.log(airline.slice(1, -1));
+console.log(airline.slice(-2));   // al
+console.log(airline.slice(1, -1));  // AP Air Portuga
+console.log(airline.slice(1, 3));  // AP
 
 const checkMiddleSeat = function (seat) {
   // B and E are middle seats

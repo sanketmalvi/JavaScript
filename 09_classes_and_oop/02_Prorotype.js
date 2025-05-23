@@ -1,7 +1,7 @@
 let  myname = 'Sanket'
 let mywork = 'Developer'
 
-console.log(myname.trueLength);
+console.log(myname.trueLength); //
 
 // ---------- ------------------------
   
@@ -38,7 +38,7 @@ myHeros.Hulk()           //Access to arrays successfully
 
 Array.prototype.HiJohn = ()=> console.log(`Hi there`);
 
-// heroPower.HiJohn()         //Dont get access to Arrays
+// heroPower.HiJohn()         //Dont get access to objects
 myHeros.HiJohn()              //Get access to Arrays
 
 
@@ -75,6 +75,7 @@ String.prototype.trueLength = function(){     //Adding functionality to String
     console.log(`True length is: ${this.trim().length}`);
 }
 
-game.trueLength()
+game.trueLength() 
 
-"sanket".trueLength()
+"sanket".trueLength() 
+console.log(game); // Snooker

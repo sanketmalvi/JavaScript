@@ -1,4 +1,7 @@
 // Reduce
+// The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
+
+// If accumulator is not provided, the first element in the array will be used as the initial accumulator value. The first element will be skipped, and the second element will be used as current value.
 
 const nums = [1, 2, 3]
 

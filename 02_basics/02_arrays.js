@@ -58,6 +58,12 @@ console.log(owners.sort());                 //Mutate original array
 // console.log(owners.slice().sort());         //sorted in copy array
 console.log(owners);
 
+// Sorting in Descending Order
+const numbers = [5, 1, 9, 3, 7];
+const descending = numbers.sort((a, b) => b - a);
+
+console.log(descending); // [9, 7, 5, 3, 1]
+
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -85,8 +91,36 @@ console.log(movements);
 
 
 
-// flat and flatMap
+// Find() : Find the first element that matches the condition
 
+// const result = array.find((element, index, array) => {
+//   // return true for the element you want
+// });
+
+// Example with Arrays
+const num = [5, 10, 15, 20];
+const found = num.find(num => num > 10);
+console.log(found); // 15 (first number > 10)
+
+// Example with objects
+const users = [
+  { id: 1, name: "Alice" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Charlie" }
+];
+
+const user = users.find(u => u.id === 2);
+
+console.log(user); // { id: 2, name: "Bob" }
+
+
+// NOTE: Not suitable if you want all matches — use .filter() for that
+
+
+
+
+
+// flat and flatMap
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
 console.log(arr.flat());
 

@@ -1,3 +1,14 @@
+// Functions in JavaScript
+// 1. Function Declaration  
+// 2. Function Expression
+// 3. Arrow Function
+// 4. IIFE (Immediately Invoked Function Expression)
+// 5. Callback Function
+
+// Functions are first-class citizens in JavaScript, meaning they can be treated like any other value. They can be assigned to variables, passed as arguments to other functions, returned from functions, and so on.
+
+
+
 function sayMyName(){
         console.log("S");
         console.log("A");
@@ -46,8 +57,8 @@ function loginUserMessage(username){
 }
 
 // OR
-
-function loginUserMessage(username = "sam"){       //Default parameter
+//Default parameter
+function loginUserMessage(username = "sam"){       
     if (!username) {   //When parameter is undefined it willn't go in the loop, SO use ! sign
         // console.log("Enter Name");
         return
@@ -61,6 +72,47 @@ console.log(loginUserMessage());    //undefined : When not passing anything
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT
 
+
+
+
+// Passing Function as a parameter
+function sayHello(greet, name){
+    console.log("Hello"+ " " + name);
+    greet();
+}
+
+function greet(){
+    console.log("I am a Coder");
+}
+sayHello(greet, "John") 
+
+
+
+// passing null as a parameter
+function sayHello(name= "Sam"){
+    console.log("Hello"+ " " + name);
+}
+sayHello(null) // Hello null
+
+
+// passing undefined as a parameter
+function sayHello(name= "Sam"){
+    console.log("Hello"+ " " + name);
+}
+sayHello(undefined) // Hello Sam
+
+
+
+
+
+// Returning a function from a function
+function outerFunction(){
+    return function innerFunction(){
+        console.log("I am a inner function");
+    }
+}
+const innerFunc = outerFunction()   //outerFunction will return innerFunction
+console.log(innerFunc());   // I am a inner function
 
 
 

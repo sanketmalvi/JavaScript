@@ -27,7 +27,7 @@ createUser.prototype.printMe = function(){        //Injecting our own functional
 const cricket = new createUser("Mahi", 50)
 const football = createUser("Messi", 10)
 
-cricket.printMe()
+cricket.printMe() // Score = 50
 
 
 /*

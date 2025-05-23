@@ -24,7 +24,7 @@ class Teacher extends User {
     }
 }
 
-const student = new Teacher("palak", "palak@example.com")
+const student = new Teacher("sam", "sam@example.com")
 student.logMe()
 
 student.createId()

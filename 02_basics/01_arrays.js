@@ -31,7 +31,7 @@ console.log(typeof newArr);
 
 //-------------------------------------------------------
 
-// SLICE , Splice
+// SLICE 
 
 console.log("A ", myArr);
 
@@ -41,9 +41,19 @@ console.log(myn1);
 console.log("B ", myArr);
 
 
+// Slice : We can insert, remove and replace the elements of an array
+
 const myn2 = myArr.splice(1, 3) //In splice range portion will remove from original array   
-console.log(myn2);
-console.log("C ", myArr);      // c [0, 4, 5]
+console.log(myn2); // [1, 2, 3]
+console.log("C ", myArr);     // [0, 4, 5]
+
+const arr5= [100, 200, "hello", true, 5];
+arr5.splice(1, 2, "hi", "bye"); // 1st parameter is index, 2nd is how many elements to remove, 3rd and 4th are the new elements to add
+console.log(arr5); // [100, "hi", "bye", true, 5]
+
+arr5.splice(1, 0, "john") //Insert "john" at index 1 without removing any elements
+console.log(arr5); // [100, "john", "hi", "bye", true, 5]
+
 
 // REVERSE
 arr = ['a', 'b', 'c', 'd', 'e'];

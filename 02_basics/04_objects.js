@@ -43,10 +43,24 @@ console.log("obj5", obj5);
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign
 
-// Best Way
+// Best Way  
 const obj6 = {...obj1, ...obj2, ...obj4}         //Spread Operator
 console.log('obj6',obj6);
 
+
+
+const obj8 = obj2; // 
+console.log(obj8); //Output: {3: "a", 4: "b"}
+// It will create a reference of obj2 in obj8, so if we change the value of obj8 then it will also change the value of obj2
+
+
+// Object clonning using spread operator
+const obj7 = {...obj1}  // It will create a new object and copy all the values of obj1 in it
+
+// check
+obj7[1] = "c"
+console.log(obj1); //Output: {1: "a", 2: "b"}
+console.log(obj7); //Output: {1: "c", 2: "b"}
 
 
 // +++++++++++++++++++++++++  IMPORTANT  +++++++++++++++++++++++++++++++

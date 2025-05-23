@@ -1,10 +1,13 @@
-// Hoisting : Make some types of variables accessible in code before they declared. 
-            //   "Variables lifted to top of their scope"
+/* Hoisting : Make some types of variables accessible in code before they declared. 
 
-// Behind the Scene: Before execution, code is scanned for variable declaration, and for each variable, a new property is created in the variable environment object.
+-> "Variables  and function declaration lifted to top of their scope"
+-> Only var and function declarations are hoisted, not let and const
 
-// when assign const and let so this get in TEMPORAL DEAD ZONE
+-> Behind the Scene: Before execution, code is scanned for variable declaration, and for each    variable, a new property is created in the variable environment object.
 
+-> when assign const and let so this get in TEMPORAL DEAD ZONE
+-> In temporal dead zone, from the start of the block until the declaration is encountered, the variable is in a "dead zone" and cannot be accessed.
+*/
 
 // Variables
 console.log(me);

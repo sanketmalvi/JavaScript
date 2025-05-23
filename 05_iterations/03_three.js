@@ -28,7 +28,9 @@ for (const greet of greetings) {
 
 
 
-// Maps
+// Maps(ES^6)
+// Maps are iterable objects
+// Maps are collections of key-value pairs
 // Same like objects but it has unique values and remember the original insertion order of the keys
 
 const map = new Map()
@@ -36,14 +38,18 @@ map.set('state', "MP")
 map.set('In', "India")
 map.set('USA', "America")
 
-console.log(map);
+console.log(map); 
 
 
 
 for (const [key, value] of map) {        //Destructuring of array
     console.log(key, '-', value);
 }
-
+/*
+Use Map when:   1. You need non-string keys
+                2. You want guaranteed order
+                3. You're frequently adding/removing key-value pairs
+*/
 
 
 

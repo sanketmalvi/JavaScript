@@ -1,28 +1,59 @@
 // ES6
+// Class is a blueprint for creating objects 
 
-// class User{
-//     constructor(userName, email, password) {
-//         this.userName = userName
-//         this.email = email
-//         this.password = password
-//     }
+class Human {
+    // Properties
+    age = 15;   //public
+    weight = 50;
+    #height = 5.5; //private
 
-//     encryptPassword(){
-//         return `${this.password}abc`
-//     } 
+    // Behavior
+    walk() {   //this is a method
+        console.log("Walking");
+    }
+    running() {
+        console.log("Running", this.#height);
+    }   
+}
 
-//     changeUsername(){
-//         return `${this.userName.toUpperCase()}`
-//     }
+let obj = new Human(); // creating an object of Human class
+console.log(obj.age); // 15
+console.log(obj.weight); // 50
 
-// }
+// console.log(obj.#height); // Error: Private field '#height' must be declared in an enclosing class
 
-// const result = new User("sanket", "sanket@example.com", "123")
-// console.log(result);
+obj.walk(); // Walking
 
-// console.log(result.encryptPassword());
+// ------------------------------
 
-// console.log(result.changeUsername());
+
+
+
+// constructor is a special method for creating and initializing an object created with a class.
+
+class User{
+    constructor(userName, email, password) {  
+        this.userName = userName
+        this.email = email
+        this.password = password
+    }
+
+    encryptPassword(){
+        return `${this.password}abc`
+    } 
+
+    changeUsername(){
+        return `${this.userName.toUpperCase()}`
+    }
+
+}
+
+const result = new User("sanket", "sanket@example.com", "123")
+console.log(result);
+
+console.log(result.encryptPassword()); // 123abc
+
+console.log(result.changeUsername()); // SANKET
 
 
 
