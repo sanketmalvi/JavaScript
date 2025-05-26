@@ -20,6 +20,13 @@
     div.style.fontSize = "35px"
     div.style.color = "white"
 
+    // MUltiple Styles add in single line
+    div.style.cssText = "background-color: green; font-size: 35px; color: white;"
+
+
+    // Set classes to the div
+    div.classList.add('container', 'container-fluid')
+
     // div.innerText = "Welcome to the webpage"
     const addText = document.createTextNode("Welcome to the webpage")
     div.appendChild(addText)
