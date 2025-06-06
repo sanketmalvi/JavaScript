@@ -143,6 +143,10 @@ const book = lufthansa.book;
 // book(23, 'Sarah Williams');
 
 ////-----------Call method--------------////
+// The call method allows us to call a method on an object, but with a different this context
+// Using the call method, we can set the this keyword to refer to a different object.
+// This is useful when we want to use a method from one object on another object.
+
 book.call(eurowings, 23, 'Sarah Williams');
 console.log(eurowings);
 
@@ -158,6 +162,10 @@ const swiss = {
 book.call(swiss, 583, 'Mary Cooper');
 
 ////------ Apply method--------////
+// The apply method is similar to the call method, but it takes an array of arguments instead of a list of arguments.
+// This is useful when we want to pass an array of arguments to a method that expects a list of arguments.
+// The apply method allows us to call a method on an object, but with a different this context and an array of arguments.
+
 const flightData = [583, 'George Cooper'];  
 book.apply(swiss, flightData);    //when passing an array use 'Apply' method
 console.log(swiss);
@@ -166,6 +174,11 @@ book.call(swiss, ...flightData);  //Or can pass with spread operator
 
 
 /////------ The bind Method--------//////
+// The bind method creates a new function that, when called, has its this keyword set to the provided value.
+// It allows us to create a new function with a specific this context, which can be useful for event handlers or when we want to pass a method as a callback.
+// The bind method does not immediately call the function, but instead returns a new function that can be called later with the specified this context.
+// The bind method is useful when we want to create a new function with a specific this context, which can be useful for event handlers or when we want to pass a method as a callback.
+
 // book.call(eurowings, 23, 'Sarah Williams');
 
 const bookEW = book.bind(eurowings);     //Does the same thing as call and Apply
@@ -318,7 +331,15 @@ runOnce();
 
 
 ///////////////////////////////////////
-// Closures
+// Closure: It's a function that has access to the outer function's scope, even after the outer function has finished executing.
+
+// How it works:
+// 1. The outer function is executed, creating a new scope.
+// 2. The inner function is defined within the outer function, and it has access to the outer function's variables.
+// 3. The inner function is returned, and it retains access to the outer function's scope, even after the outer function has finished executing.
+
+
+
 const secureBooking = function () {
   let passengerCount = 0;
 
